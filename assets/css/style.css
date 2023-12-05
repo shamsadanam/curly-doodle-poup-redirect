@@ -330,6 +330,101 @@ nav .logo img{
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 540px){
     
+.contentBox_front{
+    max-width: 90%;
+    width: 450px;
+}
+
+.contentBox_back{
+    position: absolute;
+    max-width: 90%;
+    width: 450px;
+}
+
+}
+
+@media (max-width: 480px){
+
+    .nav-right button{
+        display: none;
+    }
+    
+    .contentBox_front{
+        max-width: 90%;
+        width: 420px;
+    }
+    
+    .contentBox_back{
+        position: absolute;
+        max-width: 90%;
+        width: 420px;
+    }
+
+    .ratting_progress_value p {
+        width: 20%;
+    }
+
+    .start-number {
+        max-width: 80%;
+    }
+    
+}
+
+@media (max-width: 375px){
+    .nav-right button{
+        display: none;
+    }
+    .contentBox_front h3{
+        font-size: 14px;
+    }
+    
+    .star_wrapper{
+        font-size: 42px;
+    }
+
+    .start-number {
+        max-width: 80%;
+        font-size: 14px;
+        gap: 40px;
+    }
+    
+}
+
+@media (max-width: 350px){
+    .nav-right button{
+        display: none;
+    }
+    .ratting_progress_value p{
+        font-size: 13px;
+    }
+    .start-number {
+        max-width: 83%;
+        font-size: 12px;
+        gap: 38px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 325px){
+
+    nav .logo img {
+        width: 150px;
+        height: 35px;
+    }
+
+    .nav-right button{
+        display: none;
+    }
+    .star_wrapper{
+        font-size: 38px;
+    }
+
+    .start-number {
+        max-width: 85%;
+        font-size: 12px;
+        gap: 35px;
+        line-height: 20px;
+    }
 }
