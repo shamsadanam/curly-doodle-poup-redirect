@@ -1,6 +1,6 @@
 var tl = gsap.timeline();
 
-tl.from("nav .logo , .main-menu a, .nav-right a, .nav-right button, nav .nav-right #feedbacCta", {
+tl.from("nav .logo , .main-menu a, .nav-right a, .nav-right button, nav .nav-right #feedbacCta, #mobileToggle", {
     y: -100,
     duration: 1,
     delay: 0.5,
