@@ -167,9 +167,9 @@ nav .logo img{
 
 .animateHeading h2{
     color: #3F3D56;
-    font-size: 1.4rem;
+    font-size: 1.8vw;
     font-weight: 600;
-    line-height: 30px; /* 125% */
+    line-height: 2vw; /* 125% */
     text-transform: uppercase;
 }
 
@@ -273,4 +273,37 @@ nav .logo img{
     width: 15%;
     font-size: 18px;
     font-weight: 500;
+}
+
+@media (max-width: 950px){
+    .heroMain {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .hContent h1 {
+        font-size: 12.2vw;
+        text-align: center;
+    }
+
+    .hLeft{
+        width: 100%;
+    }
+
+    .hContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .animateHeading h2 {
+        font-size: 3vw;
+    }
+
+    .hRight{
+        margin-top: 54vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
