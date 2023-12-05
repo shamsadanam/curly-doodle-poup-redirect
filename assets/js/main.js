@@ -19,7 +19,14 @@ tl.from(".animateHeading", {
     opacity: 0,
 })
 
-tl.from(".hRight", {
+tl.from(".contentBox_front", {
     x: 100,
     opacity: 0,
+})
+
+tl.from(".contentBox_back", {
+    scale: 1, 
+    opacity: 0,
+    duration: 5,
+    rotate: -7,
 })
