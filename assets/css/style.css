@@ -1,5 +1,5 @@
 @font-face {
-    font-family: CustomFont;
+    font-family: 'Druk Text Trial';
     src: url('/assets/fonts/Druk-Medium-Trial.otf');
 }
 :root{
@@ -148,7 +148,7 @@ nav .logo img{
 
 .hContent h1{
     color: #3F3D56;
-    font-family: CustomFont;
+    font-family: 'Druk Text Trial';
     font-size: 10vw;
     font-style: normal;
     font-weight: 500;
