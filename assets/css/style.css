@@ -230,11 +230,12 @@ nav .logo img{
     text-align: center;
     font-size: 55px;
     line-height: 55px;
-    color: #FFC550;
+    color: #808080;
     padding: 10px 10px;
     border-radius: 5px;
     margin: 20px auto;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .start-number {
@@ -270,8 +271,8 @@ nav .logo img{
 }
 
 .bar:nth-child(1){
-    width: 90%;
-    background: #FFC550;
+    /* width: 90%; */
+    background: gold;
     height: 14px;
     border-radius: 10px;
 }
