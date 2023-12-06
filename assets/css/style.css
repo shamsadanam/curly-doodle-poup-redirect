@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Druk Text Trial';
-    src: url('/assets/fonts/Druk-Medium-Trial.otf');
+    src: url('/assets/fonts/Druk-Medium-Trial.woff');
 }
 :root{
     --bg: #F7F7F7;
