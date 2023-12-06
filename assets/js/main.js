@@ -31,35 +31,33 @@ tl.from(".contentBox_back", {
     rotate: -7,
 });
 
+
 let data = [
     {
-        'star' : 5,
-        'count' : 10068
-    }, 
+        'star': 5,
+        'count': 1001
+    },
     {
-        'star' : 4,
-        'count': 3356
+        'star': 4,
+        'count': 80
     },
     {
         'star': 3,
-        'count': 945
-    }, 
+        'count': 33
+    },
     {
         'star': 2,
-        'count': 550
+        'count': 13
     },
     {
         'star': 1,
-        'count': 101
+        'count': 0
     }
 ]
 
 let selectedStars = [];
 
-let totalRatting = 0;
-data.forEach(ratting => {
-    totalRatting += ratting.count;
-})
+let totalRatting = data.reduce((total, ratting) => total + ratting.count, 0);
 
 const starElements = document.querySelectorAll('.star_wrapper .start span');
 const rattingCountWrapper = document.querySelector('.ratting-count-wrapper');
@@ -70,7 +68,7 @@ data.forEach(ratting => {
         <div class="ratting_progress_value">
             <p>${ratting.star} Star</p>
             <div class="progress">
-                <div class="bar" style="width:${(ratting.count / totalRatting)*100}%"></div>
+                <div class="bar" style="width:${(ratting.count / totalRatting) * 100}%"></div>
             </div>
         </div>
     `;
@@ -79,33 +77,26 @@ data.forEach(ratting => {
 
 starElements.forEach((star, index) => {
     star.addEventListener('click', () => {
-        // Toggle the selection
         const selectedIndex = index;
         const isSelected = selectedStars.includes(selectedIndex);
 
         if (isSelected) {
-            // Deselect the current star and all subsequent stars
             selectedStars = selectedStars.filter(selIndex => selIndex < selectedIndex);
         } else {
-            // Select the current star and all previous stars
             selectedStars = Array.from({ length: selectedIndex + 1 }, (_, i) => i);
         }
 
-        // Update the styles for all stars
         updateStarStyles(isSelected);
-
-        // Update the counts based on the selected stars
-        selectedStars.forEach(selectedIndex => {
-            let selectedRatting = data.find(r => r.star === (5 - selectedIndex)); // Reverse index for your data
-            selectedRatting.count += 1;
-            console.log(`Rating ${selectedRatting.star}: Count updated to ${selectedRatting.count}`);
-        });
-
-        // Recalculate totalRatting
-        totalRatting += selectedStars.length;
-
-        // Update the progress bars
         updateProgressBars();
+
+        // Check the selected rating and take appropriate action
+        const selectedRating = 5 - selectedIndex; // Reverse index for your data
+
+        if (selectedRating >= 1 && selectedRating <= 3) {
+            openFeedbackForm();
+        } else if (selectedRating >= 4 && selectedRating <= 5) {
+            redirectToAnotherPage();
+        }
     });
 
     star.addEventListener('mouseenter', () => {
@@ -116,6 +107,22 @@ starElements.forEach((star, index) => {
         updateStarStyles();
     });
 });
+
+function openFeedbackForm() {
+    const firstName = window.prompt('Enter your first name:');
+    const lastName = window.prompt('Enter your last name:');
+    const feedback = window.prompt('Provide your feedback:');
+    console.log(`Feedback submitted: ${firstName} ${lastName}, Feedback: ${feedback}`);
+}
+
+function redirectToAnotherPage() {
+    // Redirect only if there are 4 or 5 stars selected
+    const selectedRating = selectedStars.length > 0 ? 5 - selectedStars[selectedStars.length - 1] : 0;
+
+    if (selectedRating >= 4 && selectedRating <= 5) {
+        window.location.href = 'https://facebook.com'; // Replace with your desired URL
+    }
+}
 
 function updateStarStyles(isSelected = false) {
     starElements.forEach((s, i) => {
@@ -137,11 +144,12 @@ function updateProgressBars() {
             <div class="ratting_progress_value">
                 <p>${ratting.star} Star</p>
                 <div class="progress">
-                    <div class="bar" style="width:${(ratting.count / totalRatting)*100}%"></div>
+                    <div class="bar" style="width:${(ratting.count / totalRatting) * 100}%"></div>
                 </div>
             </div>
         `;
         rattingCountWrapper.innerHTML += ratting_progress;
     });
 }
+
 
