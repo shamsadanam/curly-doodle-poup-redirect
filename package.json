@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sass": "^1.63.6"
+  },
+  "scripts": {
+    "sass": "sass --no-source-map --style=compressed ./assets/scss/popup.scss ./assets/css/popup.css"
+  }
+}

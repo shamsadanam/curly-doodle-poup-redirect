@@ -1,91 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Feedback Landing page from user.">
-    <meta name="keywords" content="landing page, html css landing page, gsap">
-    <meta name="author" content="Masum Billah">
-    <title>Feedback.com | Provide your valueable feedback</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Feedback Landing page from user.">
+  <meta name="keywords" content="landing page, html css landing page, gsap">
+  <meta name="author" content="Masum Billah">
+  <title>Feedback.com | Provide your valueable feedback</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/popup.css">
+
 </head>
+
 <body>
-    <div id="wrapper">
-        <header>
-            <div class="container">
-               <nav>
-                    <div class="logo">
-                        <a href="#" aria-label="homepage"><img height="57" src="./assets/img/logo.png" alt=""></a>
-                    </div>
-                    <div class="main-menu">
-                        <a href="#" aria-label="View all feedback">all feedback</a>
-                        <a href="#" aria-label="View products">products</a>
-                    </div>
-                    <div class="nav-right">
-                        <button  aria-label="User Menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
-                            <path d="M17 19V17C17 15.9391 16.5786 14.9217 15.8284 14.1716C15.0783 13.4214 14.0609 13 13 13H5C3.93913 13 2.92172 13.4214 2.17157 14.1716C1.42143 14.9217 1 15.9391 1 17V19" stroke="#3F3D56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 9C11.2091 9 13 7.20914 13 5C13 2.79086 11.2091 1 9 1C6.79086 1 5 2.79086 5 5C5 7.20914 6.79086 9 9 9Z" stroke="#3F3D56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <div id="feedbacCta">
-                            <a href="#" aria-label="Provide feedback">Provide feedback</a>
+  <div id="wrapper">
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="#" aria-label="homepage"><img height="57" src="./assets/img/logo.png" alt=""></a>
+          </div>
+          <div class="main-menu">
+            <a href="#" aria-label="View all feedback">all feedback</a>
+            <a href="#" aria-label="View products">products</a>
+          </div>
+          <div class="nav-right">
+            <button aria-label="User Menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                <path
+                  d="M17 19V17C17 15.9391 16.5786 14.9217 15.8284 14.1716C15.0783 13.4214 14.0609 13 13 13H5C3.93913 13 2.92172 13.4214 2.17157 14.1716C1.42143 14.9217 1 15.9391 1 17V19"
+                  stroke="#3F3D56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M9 9C11.2091 9 13 7.20914 13 5C13 2.79086 11.2091 1 9 1C6.79086 1 5 2.79086 5 5C5 7.20914 6.79086 9 9 9Z"
+                  stroke="#3F3D56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="feedbacCta">
+              <a href="#" aria-label="Provide feedback">Provide feedback</a>
 
-                        </div>
-                        
-                        <div id="mobileToggle">
-                            <a href="" aria-label="Navigation toggle"><i class="ri-menu-3-fill"></i></a>
-                        </div>
-                    </div>
-               </nav>
             </div>
-        </header>
 
-        <section class="hero-section">
-            <div class="container">
-                <div class="heroMain">
-                    <div class="hLeft">
-                        <div class="hContent">
-                            <h1>would you</h1>
-                            <h1>recommend us</h1>
-                            <div class="animateHeading">
-                                <h2>Empower progress, share your voice</h2>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="hRight">
-                        <div class="contentBox_back"></div>
-                        <div class="contentBox_front">
-                            <h3>Please select Start Amount</h3>
-                            <div class="star_wrapper">
-                                <div class="start">
-                                    <span>&#9733;</span>
-                                    <span>&#9733;</span>
-                                    <span>&#9733;</span>
-                                    <span>&#9733;</span>
-                                    <span>&#9733;</span>
-                                </div>
-                                <div class="start-number">
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
-                                </div>
-                            </div>
-                            <div class="ratting-count-wrapper">
-                                
-                            </div>
-                        </div>
-                    </div>
+            <div id="mobileToggle">
+              <a href="" aria-label="Navigation toggle"><i class="ri-menu-3-fill"></i></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="heroMain">
+          <div class="hLeft">
+            <div class="hContent">
+              <h1>would you</h1>
+              <h1>recommend us</h1>
+              <div class="animateHeading">
+                <h2>Empower progress, share your voice</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="hRight">
+            <div class="contentBox_back"></div>
+            <div class="contentBox_front">
+              <h3>Please select Start Amount</h3>
+              <div class="star_wrapper">
+                <div class="start">
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
+                  <span>&#9733;</span>
                 </div>
+                <div class="start-number">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                  <span>4</span>
+                  <span>5</span>
+                </div>
+              </div>
+              <div class="ratting-count-wrapper">
+
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <form>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="feedback">Feedback</label><br>
+        <textarea id="feedback" name="feedback"></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
-    <script src="./assets/js/gsap.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+  </div>
+  <script src="./assets/js/gsap.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
