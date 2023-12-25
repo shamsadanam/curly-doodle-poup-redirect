@@ -13,12 +13,131 @@
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/popup.css">
+  <!-- <link rel="stylesheet" href="./assets/css/popup.css"> -->
 
 </head>
 
+<style>
+  .overlay {
+    position: fixed;
+    /* Fixed position */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Sit on top */
+    cursor: pointer;
+    /* Enable clicking on the overlay to close the popup */
+    backdrop-filter: blur(10px);
+    /* Apply blur */
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 75px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    /* filter: blur(5px); */
+    /* border: 1px solid red; */
+  }
+
+  .popup.show {
+    display: block;
+    opacity: 1
+  }
+
+  .popup .popup-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 32px;
+    border: 1px solid #888;
+    border-radius: .5rem;
+    width: 60%;
+    z-index: 3;
+  }
+
+  .popup .popup-content form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto
+  }
+
+  .popup .popup-content form h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .popup .popup-content form label {
+    margin-bottom: 5px;
+    font-weight: bold
+  }
+
+  .popup .popup-content form input[type=text],
+  .popup .popup-content form input[type=email],
+  .popup .popup-content form textarea {
+    /* margin-bottom: 15px; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px
+  }
+
+  .popup .popup-content form input[type=submit] {
+    font-size: 14px;
+    padding: 10px 30px;
+    border-radius: .5rem;
+    border: 1px solid #2d2d33;
+    background: #3f3d56;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .5s;
+    font-family: var(--baseFont)
+  }
+
+  .popup .popup-content form input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #3f3d56
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold
+  }
+
+  .popup .close:hover,
+  .popup .close:focus {
+    color: tomato;
+    text-decoration: none;
+    cursor: pointer
+  }
+</style>
+
 <body>
   <div id="wrapper">
+
     <header>
       <div class="container">
         <nav>
@@ -59,10 +178,15 @@
           <div class="hLeft">
             <div class="hContent">
               <h1>would you</h1>
-              <h1>recommend us</h1>
-              <div class="animateHeading">
+              <h1>recommend us?</h1>
+              <h2>Tabac Coffee</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia laudantium optio cumque
+                consequatur qui eaque totam molestias officiis veniam veritatis reprehenderit, porro ea quis repudiandae
+                fugiat! Amet et blanditiis reprehenderit facilis maxime voluptatum placeat quisquam laborum ipsam,
+                ratione dolorem, officiis velit labore, beatae deserunt quo non obcaecati mollitia! Cum.</p>
+              <!-- <div class="animateHeading">
                 <h2>Empower progress, share your voice</h2>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -96,15 +220,18 @@
     </section>
   </div>
   <div id="popup" class="popup">
+    <div class="overlay"></div>
     <div class="popup-content">
       <span class="close">&times;</span>
+
       <form>
+        <h3>Tabac Coffee</h3>
         <label for="name">Name</label><br>
         <input type="text" id="name" name="name"><br>
         <label for="email">Email</label><br>
         <input type="email" id="email" name="email"><br>
         <label for="feedback">Feedback</label><br>
-        <textarea id="feedback" name="feedback"></textarea><br>
+        <textarea id="feedback" name="feedback" rows="10"></textarea><br>
         <input type="submit" value="Submit">
       </form>
     </div>
